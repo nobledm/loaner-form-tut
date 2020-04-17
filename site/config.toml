@@ -2,7 +2,6 @@ baseurl = "https://loanerformtut.netlify.app/"
 languageCode = "en-us"
 languageLang = "en"
 title = "Homepage"
-realtiveURLs: true
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
