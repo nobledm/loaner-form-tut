@@ -1,6 +1,6 @@
 ---
-title: Great coffee with a conscience
-subtitle: Support sustainable farming while enjoying a cup
+title: Build a Form with Canvas and Camera
+subtitle: Android Studio Tutorial
 image: img/home-jumbotron.jpg
 blurb:
   heading: Why Kaldi?
