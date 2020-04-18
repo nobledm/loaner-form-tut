@@ -1,4 +1,4 @@
-baseurl = "https://loanerformtut.netlify.app/"
+baseurl = ""
 languageCode = "en-us"
 languageLang = "en"
 title = "Homepage"
