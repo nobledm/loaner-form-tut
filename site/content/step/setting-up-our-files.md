@@ -15,15 +15,14 @@ This application needs access to the camera, file storage, and the internet for 
         android:name="android.hardware.camera"
         android:required="true"
 />
-
-    <uses-permission
+<uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18"
-    />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+/>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
 This should go at the top of your AndroidManifest file. There's another thing we need to add to the manifest, but we'll return to it once we reach that stage in the tutorial.
