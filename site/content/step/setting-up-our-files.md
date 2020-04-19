@@ -93,7 +93,7 @@ What default values you place don't matter, except for the email. Please put you
 
 In the end it will look something like this:
 
-![preference screen](https://loanerformtut.netlify.app/site/static/img/step-file-structure.jpg)
+![preference screen](https://loanerformtut.netlify.app/site/static/img/step-prefs-screen.JPG)
 
 ##### file_paths.xml
 
