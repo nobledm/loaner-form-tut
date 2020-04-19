@@ -15,7 +15,7 @@ body {
 
 p {
   margin-bottom: var(--spacing-medium);
-  max-width: 32rem;
+  max-width: 35rem;
 }
 
 pre {
