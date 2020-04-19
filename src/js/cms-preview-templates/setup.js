@@ -35,7 +35,7 @@ export default class SetupPreview extends React.Component {
         image;
     }
 
-    const entryValues = entry.getIn(["data", "values"]);
+    const entryValues = entry.getIn(["data", "setup"]);
     const values = entryValues ? entryValues.toJS() : [];
 
     return (

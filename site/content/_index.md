@@ -8,7 +8,6 @@ blurb:
     Or at least some interesting features that could be included when dealing
     with forms on a device with touch capabilities. In this case, a phone.
 
-
     This tutorial will cover the creation of a simple form which makes use of the typical fields like inputs, textareas, and checkboxes, but also dealing with the camera and canvas features of mobile devices. Submission of the form will be handled by an email containing all of the entered information.
 setup:
   heading: Before We Start

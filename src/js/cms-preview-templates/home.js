@@ -42,17 +42,6 @@ export default class HomePreview extends React.Component {
               {entry.getIn(["data", "setup", "heading"])}
             </h2>
             <p className="mb4 mw6">{entry.getIn(["data", "setup", "text"])}</p>
-
-            {/* <div className="flex-ns mhn2-ns mb3">
-              {(entry.getIn(["data", "products"]) || []).map((product, i) => <div className="ph2-ns w-50-ns" key={i}>
-                <img src={getAsset(product.get("image"))} alt="" className="center db mb3" style={{width: "240px"}}/>
-                <p>{product.get("text")}</p>
-              </div>)}
-            </div>
-
-            <div className="tc">
-              <a href="#" className="btn raise">See all products</a>
-            </div> */}
           </div>
         </div>
 
@@ -61,10 +50,10 @@ export default class HomePreview extends React.Component {
             <div className="flex-l mhn2-l">
               <div className="w-40-l ph2-l">
                 <h2 className="f2 b lh-title mb2">
-                  {entry.getIn(["data", "values", "heading"])}
+                  {entry.getIn(["data", "step", "heading"])}
                 </h2>
 
-                <p>{entry.getIn(["data", "values", "text"])}</p>
+                <p>{entry.getIn(["data", "step", "text"])}</p>
               </div>
 
               <div className="w-60-l ph2-l">
@@ -72,11 +61,11 @@ export default class HomePreview extends React.Component {
               </div>
             </div>
 
-            {/* <div className="tc">
+            <div className="tc">
               <a href="{{.buttonLink}}" className="btn raise">
                 Begin
               </a>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
