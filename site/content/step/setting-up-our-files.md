@@ -25,17 +25,16 @@ This application needs access to the camera, file storage, and the internet for 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
-This should go at the top of your AndroidManifest file. There's another thing we need to add to the manifest, but we'll return to it once we reach that stage in the tutorial.
 
+This should go at the top of your AndroidManifest file. There's another thing we need to add to the manifest, but we'll return to it once we reach that stage in the tutorial.
 
 ## Our Resources
 
 Aside from our layout for the main activity we're also going to make use of a settings menu and external file paths to store images. The default project structure does not setup these folders so we have to do it ourselves.
 
-![file structure](https://loanerformtut.netlify.app/site/static/img/step-file-structure.jpg)
+![file structure](img/step-file-structure.JPG)
 
-Create a *menu* and *xml* directory.
-Note that the menu directory and the *activity_prefs.xml* are **not** needed and could be skipped -- this is just how I am setting up some variables for the form.
+Create a *menu* and *xml* directory. Note that the menu directory and the *activity_prefs.xml* are **not** needed and could be skipped -- this is just how I am setting up some variables for the form.
 
 ### Menu Directory
 
@@ -87,17 +86,19 @@ Now, these are a bit deprecated so feel free to be fancy and do it the way new a
     </PreferenceCategory>
 </PreferenceScreen>
 ```
-Preference Categories are not necessary, but are useful if you have multiple 'sections' of settings/preferences for a user. In this case we don't. However, I like the little title section it provides as just decent UX [user experience].
+
+Preference Categories are not necessary, but are useful if you have multiple 'sections' of settings/preferences for a user. In this case we don't. However, I like the little title section it provides as just decent UX \[user experience].
 
 What default values you place don't matter, except for the email. Please put your email here, or when we finish setting up the menu go and change the value to your email address. This is the address we'll use later on in the tutorial.
 
 In the end it will look something like this:
 
-![preference screen](https://loanerformtut.netlify.app/site/static/img/step-file-structure.jpg)
+![preference screen](img/step-prefs-screen.JPG)
 
 ##### file_paths.xml
 
 This is very important for saving images:
+
 ```java
 <paths>
     <external-path
@@ -109,6 +110,6 @@ This is very important for saving images:
 
 This tells our app how to save files. We're using external storage so use the *external-path* tag, give it a name, and for the path property we just use a dot for the default root. If you want to provide somewhere specific feel free, just know what you're doing or it may not save.
 
-
 ### Setup Done!
+
 Right on, now we can move onto completing our menu.
