@@ -4,6 +4,14 @@
   color: var(--primary);
 }
 
+.secondary {
+  color: var(--secondary);
+}
+
+.secondary-light {
+  color: var(--secondary-light);
+}
+
 .highlight {
   color: var(--highlight);
 }
@@ -38,6 +46,14 @@
 
 .bg-primary {
   background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-secondary-light {
+  background-color: var(--secondary-light);
 }
 
 .bg-highlight {
@@ -75,6 +91,15 @@
 .bg-fix-primary {
   padding: 0 var(--spacing-small);
   & :first-child {
-    box-shadow: var(--spacing-small) 0 0 var(--primary), -var(--spacing-small) 0 0 var(--primary);
+    box-shadow: var(--spacing-small) 0 0 var(--primary),
+      -var(--spacing-small) 0 0 var(--primary);
+  }
+}
+
+.bg-fix-secondary {
+  padding: 0 var(--spacing-small);
+  & :first-child {
+    box-shadow: var(--spacing-small) 0 0 var(--secondary),
+      -var(--spacing-small) 0 0 var(--secondary);
   }
 }

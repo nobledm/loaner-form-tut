@@ -3,7 +3,7 @@ import format from "date-fns/format";
 
 import Jumbotron from "./components/jumbotron";
 
-export default class PostPreview extends React.Component {
+export default class HomePreview extends React.Component {
   render() {
     const { entry, getAsset } = this.props;
     let image = getAsset(entry.getIn(["data", "image"]));
@@ -56,7 +56,7 @@ export default class PostPreview extends React.Component {
           </div>
         </div>
 
-        {/* <div className="bg-grey-1 pv4">
+        <div className="bg-grey-1 pv4">
           <div className="ph3 mw7 center">
             <div className="flex-l mhn2-l">
               <div className="w-40-l ph2-l">
@@ -72,13 +72,13 @@ export default class PostPreview extends React.Component {
               </div>
             </div>
 
-            <div className="tc">
+            {/* <div className="tc">
               <a href="{{.buttonLink}}" className="btn raise">
-                Read more
+                Begin
               </a>
-            </div>
+            </div> */}
           </div>
-        </div> */}
+        </div>
       </div>
     );
   }

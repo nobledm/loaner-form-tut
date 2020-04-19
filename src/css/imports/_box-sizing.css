@@ -1,7 +1,5 @@
 /*
- 
   BOX SIZING
-
 */
 
 html,
@@ -33,4 +31,3 @@ input[type="url"],
 .border-box {
   box-sizing: border-box;
 }
-

@@ -1,6 +1,5 @@
 {{ define "main" }}
 
-<h1>Nothing Here...</h1>
-<h3><a href="{{ "/" | relURL }}">Go Home</a></h3>
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" "Try a Different Page") }}
 
 {{ end }}
