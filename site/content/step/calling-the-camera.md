@@ -119,11 +119,11 @@ The *getExternalFilesDir* will use a 'Pictures' folder found (or created if non-
 
 #### Permission Settings on Device
 
-Despite that we ask for them sometimes they don't get set to allow on the device. So after you run the app go into your device Settings -> Apps -> OurApp (I called it Loaner Form). You'll see that under the permissions it says 'No permissions granted'. Let's fix that and give our app permissions.
+Despite that we ask for them sometimes they don't get set to allow on the device. So after you run the app go into your device Settings -> Apps -> OurApp (I called it Loaner Form). You'll see that under the permissions it says 'No permissions granted'.
 
 ![app permissions screen](img/step-permissions.jpg)
 
-Now... Go ahead and press that 'Take Photo' button!
+Let's fix that and give our app permissions. Then go ahead and press that 'Take Photo' button in our app!
 
 > Depending on the device your camera may or may not rotate the picture... and it may or may not do this in the camera activity or wait until you're back in the form. Each device is different and needs tailoring. I am not covering that in this tutorial.
 
