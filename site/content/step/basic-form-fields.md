@@ -300,9 +300,149 @@ The Camera & Signature will have separate tutorial steps.
 
 Importing vector assets is pretty trivial. Make sure you have an SVG saved somewhere. To get it into your app find the *drawable* directory in the res folder. Create a new Vector Asset. When prompted search Local Files for SVGs, find and select your file, edit it's name and size to whatever's suitable for you.
 
-<image>
+
+
+![new vector asset](img/steps-drawable.jpg)
 
 I've grabbed an expand icon from [flat icon](https://www.flaticon.com/) and imported it at size 32px. That's bigger than I need (we're using it at ~12px in the layout above) but a reasonable size should it ever be used elsewhere. For placing in the layout, whatever you name your file you can find the Image View underneath the Terms Section of the layout and replace the drawable reference.
 
 
 ## Onto the Main Activity
+As class level variables setup:
+
+```java
+EditText dateText
+boolean isMember
+```
+Then after our existing default/Prefs assignment initialize our checkbox boolean to false:
+
+```java
+isMember = false
+```
+\
+Now to get our buttons hooked up!
+
+We need to implement an *OnClickListener*, then create Button variables that link to our three buttons: Take Photo, Clear Signature, and Finish.
+
+```java
+public class MainActivity extends BaseActivity implements View.OnClickListener {
+
+    static String coordName;
+    static String coordPhone;
+    EditText dateText;
+    boolean isMember;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        //
+        // ... our previous code
+        //
+
+        isMember = false;
+
+        // Prepare Buttons
+        Button btnTakePic = findViewById(R.id.btn_takePic);
+        btnTakePic.setOnClickListener(this);
+        
+        Button btnClearSig = findViewById(R.id.btn_clearSignature);
+        btnClearSig.setOnClickListener(this);
+
+        Button btnSave = findViewById(R.id.form_save);
+        btnSave.setOnClickListener(this);
+    }
+}
+```
+\
+You may notice our class is all red squiggly... cause we need to implement the *onClick* method. Go ahead and implement it, but we'll leave it empty for now and come back to it.
+
+### Checkboxes
+Pretty straightforward and easy to do. For this example we're just going to switch out some text on the form based on whether the borrower is a member or not.
+
+In our Layout file you may notice that on our CheckBox we put an *onClick* property on it. This tells our app what function to call should the checkbox be clicked, but it's not an inherent function -- we have to make it.
+
+```java
+public void checkboxClicked(View v) {
+    boolean checked = ((CheckBox) v).isChecked();
+    TextView tvDeposit = findViewById(R.id.tv_deposit);
+
+    if (checked) {
+        tvDeposit.setText("Deposit: $0");
+        isMember = true;
+    } else {
+        tvDeposit.setText("Deposit: $40");
+        isMember = false;
+    }
+}
+```
+When clicked, it will fire this function we just made and pass it the element (called v). We cast this 'view' as a CheckBox and then find out whether it's checked or not. Based on that value we display a different value string for the Deposit text view on our form. Nice'n simple.
+
+
+### Edit Text as a Date Picker
+Similar to our checkbox, in the layout we also put an onClick function called *setDate*. So let's make that.
+
+```java
+public void setDate(View v) {
+    dateText = (EditText) v;
+
+    new DatePickerDialog(MainActivity.this, date,
+            mCalendar.get(Calendar.YEAR),
+            mCalendar.get(Calendar.MONTH),
+            mCalendar.get(Calendar.DAY_OF_MONTH)
+    ).show();
+}
+```
+We have this function set on both of our lending period Edit Texts, so we're making this as general as possible for reusability. We have to get the specific Edit Text that called the function and then call a *DatePickerDialog*; of which we also need to setup ourselves.
+
+Above this function let's create a DatePickerDialog:
+
+```java
+final Calendar mCalendar = Calendar.getInstance();
+
+DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        mCalendar.set(Calendar.YEAR, year);
+        mCalendar.set(Calendar.MONTH, month);
+        mCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.CANADA);
+        dateText.setText(dateFormat.format(mCalendar.getTime()));
+
+        if (dateText.getId() == R.id.et_fromDate) {
+            mCalendar.add(Calendar.MONTH, 1);
+
+            EditText toDate = findViewById(R.id.et_toDate);
+            toDate.setText(dateFormat.format(mCalendar.getTime()));
+        }
+    }
+};
+```
+This is nothing fancy. A standard date dialog you can find anywhere... except I added an if statement at the end. Since the standard lending period of a telescope is 1 month, should the user set the 'From' date, then the 'Return Date' field will automatically be populated with the date 1 month from that. This does not affect the clickability of the 'Return Date' field either, so the user can still edit that field if they need to.
+
+And that's it. Now when clicked those fields should populate with a date.
+
+
+### Terms & Conditions Dialog
+
+Perhaps a bit moot since we just did the date picker, but oh well.
+
+See our favorite *onClick* in the layout file? That's right here's another one! This time we're just going to open up an AlertDialog.
+
+```java
+public void openTerms(View v) {
+    AlertDialog terms = new AlertDialog.Builder(this)
+            .setTitle("Rental Agreement")
+            .setMessage("This is the body of the alert dialog where you can put in whatever text you want")
+                .setPositiveButton("I Agree", null)
+                .create();
+        terms.show();
+    }
+```
+Pretty bog standard and nothing too special there. If you want, you could also include a *.setNegativeButton* as well; and even a *Neutral* button. Though by that time you probably want to dig into making a custom alert dialog instead.
+
+
+## Basic Form Complete
+And with that we have all of the form layout complete and hooked up all the simple parts. Now to just get that Camera & Canvas, as well as the form submission done!
