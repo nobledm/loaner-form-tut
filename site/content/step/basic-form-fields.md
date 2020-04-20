@@ -436,10 +436,10 @@ public void openTerms(View v) {
     AlertDialog terms = new AlertDialog.Builder(this)
             .setTitle("Rental Agreement")
             .setMessage("This is the body of the alert dialog where you can put in whatever text you want")
-                .setPositiveButton("I Agree", null)
-                .create();
-        terms.show();
-    }
+            .setPositiveButton("I Agree", null)
+            .create();
+    terms.show();
+}
 ```
 Pretty bog standard and nothing too special there. If you want, you could also include a *.setNegativeButton* as well; and even a *Neutral* button. Though by that time you probably want to dig into making a custom alert dialog instead.
 
