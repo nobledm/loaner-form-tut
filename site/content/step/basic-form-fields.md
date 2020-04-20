@@ -4,7 +4,7 @@ date: 2020-04-20T00:30:01.387Z
 description: Time to start delving into the bulk of the app. We've gotta build
   out the form layout and start hookin' up fields'n buttons. Aside from simple
   edit texts we'll also throw in a date picker, checkbox, vector asset, and an
-  alert dialog.
+  alert.
 image: img/steps-form-fini.jpg
 ---
 ## The Layout
