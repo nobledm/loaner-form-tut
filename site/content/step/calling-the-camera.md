@@ -129,7 +129,7 @@ Now... Go ahead and press that 'Take Photo' button!
 
 Once you hit the big checkmark and come back to your form you should see the *headshot* ImageView populate with your photo. But can we find it in our files? Let's go see! Go back into the phone settings and find something for *Storage*. Select the **Internal Shared Storage** and go to *Other* and Explore.
 
-You should be brought to an Android SDK screen with a buncha folders. Select **Android** -> **data** -> then find the package name for your project and select that. Then it should just be a couple more folders under you find it!
+You should be brought to an Android SDK screen with a buncha folders. Select **Android** -> **data** -> then find the package name for your project and select that. Then it should just be a couple more single folders until you find it!
 
 ## Camera Intent Done
 
