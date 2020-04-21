@@ -4,6 +4,7 @@ date: 2020-04-21T14:41:17.678Z
 description: Now we're going to take our form, picture, and signature and send
   all that information to the coordinator's email address. This'll be a practice
   in setting up an email intent with multiple attachments.
+image: img/step-email.jpg
 ---
 All of this logic will be going into our *form_save* area which currently just houses our signature save. We'll extend that to also grabbing all of our form field data and then setting up an email intent to ship that all off.
 
