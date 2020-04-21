@@ -3,7 +3,7 @@
 		<h2 class="f2 b lh-title mb3">Ready? Then Let's Go!</h2>
 
 		<div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
-			{{ range first 4 (where .Data.Pages "Type" "step") }}
+			{{ range last 6 (where .Data.Pages "Type" "step") }}
 				<div class="ph1-ns w-50-ns flex">
 					{{ .Render "li"}}
 				</div>
