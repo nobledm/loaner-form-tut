@@ -11,9 +11,9 @@ blurb:
     This tutorial will cover the creation of a simple form which makes use of the typical fields like inputs, textareas, and checkboxes, but also dealing with the camera and canvas features of mobile devices. Submission of the form will be handled by an email containing all of the entered information.
 setup:
   heading: Before We Start
-  text:
-    For this tutorial we will be using Android Studio (java), so make sure you
+  text: For this tutorial we will be using Android Studio (java), so make sure you
     have that installed and either have an emulator setup or the appropriate
     drivers (if necessary) for running on an actual phone. If on an emulator you
-    may need to format the virtual SD card and setup email.
+    will want to visit your camera at least once to get through its setup as
+    well as setup your email to test the form submission.
 ---
