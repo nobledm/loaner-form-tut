@@ -2,9 +2,9 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
 
-{{ partial "short-text" .Params.blurb}}
+{{ partial "text-video" .Params.blurb}}
 
-{{ partial "text-and-image" (dict "heading" .Params.setup.heading "text" .Params.setup.text "buttonText" "Get Setup" "buttonLink" "/setup") }}
+{{ partial "short-text" (dict "heading" .Params.setup.heading "text" .Params.setup.text "buttonText" "Get Setup" "buttonLink" "/setup") }}
 
 {{ partial "tutorial-start" . }}
 
