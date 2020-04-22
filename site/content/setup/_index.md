@@ -18,4 +18,7 @@ setup:
     text: >
       This is not necessary, but if you'd like to play around with storage locations it's certainly an option. Once the app manifest is setup to use storage permissions you'll get a little icon in the action bar. Clicking on that you have the option of setting up the virtual SD card.
     imageUrl: "/img/setup-sd.png"
+finished:
+  heading: "Complete Files"
+  text: For the finished files, you can download them here.
 ---
