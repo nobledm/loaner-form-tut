@@ -1,45 +1,21 @@
 ---
-title: "Setup"
+title: "Get Setup"
 image: /img/about-jumbotron.jpg
+editor:
+  heading: "Android Studio"
+  text: >
+    If you don't already have an editor for your android projects, I'd recommend using Android Studio. It's what I'm using in the tutorial so this would be easiest to follow along. It is also a wonderful resource for documentation. With help setting up an emulator, take a look at their User Guide -> Build & Run Your App section.
 setup:
-  - heading: "Shade-grown coffee"
+  - heading: "Lookin' at the Camera"
     text: >
-      Coffee is a small tree or shrub that grows in the forest
-      understory in its wild form, and traditionally was grown
-      commercially under other trees that provided shade. The
-      forest-like structure of shade coffee farms provides habitat for
-      a great number of migratory and resident species.
-    imageUrl: "/img/about-shade-grown.jpg"
-  - heading: "Single origin"
+      If this is a clean boot of the emulator then a lot of default walkthroughs for some applicatoins will be active. The camera one can cause a problem with functionality of the app, as it will not return to the app after getting through it all. So, please make sure you've visited the camera and cleared that off before trying the camera section of this tutorial series.
+    imageUrl: "/img/setup-cam.png"
+  - heading: "Setting up Email Client"
     text: >
-      Single-origin coffee is coffee grown within a single known
-      geographic origin. Sometimes, this is a single farm or a
-      specific collection of beans from a single country. The name of
-      the coffee is then usually the place it was grown to whatever
-      degree available.
-    imageUrl: "/img/about-single-origin.jpg"
-  - heading: "Sustainable farming"
+      On a clean boot you'll need to setup an email account to test the form sending portion of this tutorial series. If you don't do it now you can do it later. Unlike the camera it does not interfere with the app functionality if you don't set it up ahead of time.
+    imageUrl: "/img/setup-email.png"
+  - heading: "Virtual SD Card"
     text: >
-      Sustainable agriculture is farming in sustainable ways based on
-      an understanding of ecosystem services, the study of
-      relationships between organisms and their environment. What
-      grows where and how it is grown are a matter of choice and
-      careful consideration for nature and communities.
-    imageUrl: "/img/about-sustainable-farming.jpg"
-  - heading: "Direct sourcing"
-    text: >
-      We want to truly empower the communities that bring amazing
-      coffee to you. That’s why we reinvest 20% of our profits into
-      farms, local businesses and schools everywhere our coffee is
-      grown. You can see the communities grow and learn more about
-      coffee farming on our blog.
-    imageUrl: "/img/about-direct-sourcing.jpg"
-  - heading: "Reinvest profits"
-    text: >
-      We want to truly empower the communities that bring amazing
-      coffee to you. That’s why we reinvest 20% of our profits into
-      farms, local businesses and schools everywhere our coffee is
-      grown. You can see the communities grow and learn more about
-      coffee farming on our blog.
-    imageUrl: "/img/about-reinvest-profits.jpg"
+      This is not necessary, but if you'd like to play around with storage locations it's certainly an option. Once the app manifest is setup to use storage permissions you'll get a little icon in the action bar. Clicking on that you have the option of setting up the virtual SD card.
+    imageUrl: "/img/setup-sd.png"
 ---

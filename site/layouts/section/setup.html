@@ -2,14 +2,12 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
 
-<div class="mw7 center ph3 pt4">
+{{ partial "short-text" (dict "heading" .Params.editor.heading "text" .Params.editor.text "buttonText" "Get Studio" "buttonLink" "https://developer.android.com/studio") }}
+
+<div class="mw8 center ph3 pt4">
 
   {{ range $index, $element := .Params.setup }}
-    {{ if modBool $index 2 }}
-      {{ partial "media-block" $element }}
-    {{ else }}
-      {{ partial "media-block-reverse" $element }}
-    {{ end }}
+    {{ partial "media-block-reverse" $element }}
   {{ end }}
 
 </div>
